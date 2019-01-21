@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+/* bg colors/theme colors */
+
+/* default */
+.bg-color-neutral {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: block;
+  background-color: #cccccc;
+  margin: 0 auto;
+}
+/* danger */
+.bg-color-danger {
+  background-color: #ff3b30;
+}
+
+/* primary */
+.bg-color-primary{
+  background-color: #6DD3D6;
+}
+
+/* info */
+.bg-color-info {
+  background-color: #6EC7DF;
+}
+
+/* success */
+.bg-color-success {
+  background-color: #86D9AB;
+}
+/* warning */
+.bg-color-warning {
+  background-color: #FCD27B;
+}
+
+
+

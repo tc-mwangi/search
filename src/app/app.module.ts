@@ -7,6 +7,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SearchComponent } from './search/search.component';
 import { LandingComponent } from './landing/landing.component';
+import { NavigationProfileComponent } from './navigation-profile/navigation-profile.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LandingComponent } from './landing/landing.component';
     NavigationComponent,
     ProfileComponent,
     SearchComponent,
-    LandingComponent
+    LandingComponent,
+    NavigationProfileComponent
   ],
   imports: [
     BrowserModule,
