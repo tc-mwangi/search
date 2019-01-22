@@ -39,6 +39,7 @@ export class UserService {
       html_url: string;
 
     }
+    
     let promise =new Promise((resolve,reject)=>{
         this.http.get<ApiResponse>(this.BaseUrl + this.username + this.FinalUrl).toPromise().then(response=>{
             
