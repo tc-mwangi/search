@@ -5,7 +5,7 @@ Version 0.0.1: January 22, 2019.
 
 ## Screenshots
 
-![Image](https://github.com/tc-mwangi/tri-pi-IP2/blob/master/images/Screen%20Shot%202018-12-06%20at%2009.20.03.png)
+![Image](https://github.com/tc-mwangi/github-search-app/blob/master/src/assets/images/screencapture-localhost-49154-landing-2019-01-22-14_26_02.png)
 
 
 ## Live Site
