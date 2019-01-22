@@ -89,29 +89,32 @@
                 
   
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i> </a>
+                    <a class="nav-link" href="https://www.facebook.com/"><i class="fa fa-facebook-official" aria-hidden="true"></i> </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a class="nav-link" href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a class="nav-link" href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </li>
             </ul>
         </div>
     </div>
   </nav>
+
+  
   
   
     
   
 <!-- User Profile Display Here -->
   <div class="card mb-3">
+      <!-- placeholder image -->
       <img src="{{user.avatar_url}}" width="100px" height="100px"class="card-img-top" alt="{{user.login}}">
       <div class="card-body">
         <h5 class="card-title" appUnderline >Profile</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">{{user.login}}</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
@@ -119,7 +122,9 @@
 
     <!-- Repos Display Here: Hidden until repo button is clicked -->
 
-    <div class ="card border-primary mb-3" style="max-width: 18rem;">
+    <div class ="card border-primary mb-3" *ngFor="let repo of reposArray" style="max-width: 18rem;">
+        <!-- remove labels when data is retrieved -->
+        <label for="repo-description">Username: </label>
         <div class="card-header">{{user.name}}</div>
         <div class="card-body text-primary">
             <label for="repo-description">Name: </label>
@@ -128,6 +133,9 @@
           <p class="card-text">{{repo.description}}</p>
           <a href="{{repo.html_url}}" target="_blank" class="btn btn-md pull-right">View on Github</a>
    </div>
+
+
+
 
 
 

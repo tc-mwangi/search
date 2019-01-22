@@ -39,6 +39,7 @@ import { CapitalizePipe } from './capitalize.pipe';
     AppRoutingModule,
     RoutingModule,
     FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
