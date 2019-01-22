@@ -94,4 +94,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tc-mwangi/github-search-app/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tc-mwangi/github-search-app/blob/master/LICENCE.md) file for details.
