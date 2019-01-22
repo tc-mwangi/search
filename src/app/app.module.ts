@@ -15,6 +15,8 @@ import { SearchComponent } from './search/search.component';
 import { LandingComponent } from './landing/landing.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavigationFooterComponent } from './navigation-footer/navigation-footer.component';
+import { UnderlineDirective } from './underline.directive';
+import { CapitalizePipe } from './capitalize.pipe';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { NavigationFooterComponent } from './navigation-footer/navigation-footer
     LandingComponent,
     NotFoundComponent,
     NavigationFooterComponent,
+    UnderlineDirective,
+    CapitalizePipe,
     
     
   ],
@@ -35,6 +39,7 @@ import { NavigationFooterComponent } from './navigation-footer/navigation-footer
     AppRoutingModule,
     RoutingModule,
     FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
