@@ -1,19 +1,5 @@
 <!-- <app-navigation-profile></app-navigation-profile>
 
-<div id="form">
-    <form action="">
-      <div class="form-group">
-        <div class="row">
-          <div class="col-md-8">
-            <input type="text" class="form-control" placeholder="Search the username of any github user!" [(ngModel)]="username" name="username">
-          </div>
-          <div class="col-sm-4">
-            <button class="btn" (click)="searchProfile()">Search</button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
   <div *ngIf= "profile">
     <div class="panel">
       <div class="panel-heading">
@@ -104,35 +90,48 @@
   </nav>
 
   
-  
-  
-    
-  
 <!-- User Profile Display Here -->
+
+<!-- *ngIf="user" -->
+<div>
   <div class="card mb-3">
-      <!-- placeholder image -->
-      <img src="{{user.avatar_url}}" width="100px" height="100px"class="card-img-top" alt="{{user.login}}">
+      <h5 class="card-title" appUnderline >{{user.login}}</h5>
+      <!-- placeholder image {{user.avatar_url}}-->
+      <img src="./assets/images/avatar.jpg" height="500px" width="500px" class="img-circle img-fluid" alt="avatar">
       <div class="card-body">
-        <h5 class="card-title" appUnderline >Profile</h5>
+        <h5 class="card-title" appUnderline >{{user.login}}</h5>
         <p class="card-text">{{user.login}}</p>
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
+
+    <div class="card body">
+        <ul class="list-group">
+          <li class="list-group-item">{{user.name | capitalize}} &mdash;{{user.login}}</li>
+          <li class="list-group-item">{{user.location}}</li>
+          <li class="list-group-item" *ngIf="user.bio">{{user.bio}}</li>   
+          <li class="list-group-item" *ngIf="user.email"><a href="emailto:{{user.email}}">{{profile.email}}</a></li>
+        </ul>
+      </div>
 
 
     <!-- Repos Display Here: Hidden until repo button is clicked -->
 
     <div class ="card border-primary mb-3" *ngFor="let repo of reposArray" style="max-width: 18rem;">
         <!-- remove labels when data is retrieved -->
-        <label for="repo-description">Username: </label>
-        <div class="card-header">{{user.name}}</div>
+
+
         <div class="card-body text-primary">
-            <label for="repo-description">Name: </label>
+            <label for="repo-description">Repo Name: </label>
           <h5 class="card-title">{{repo.name | capitalize}}</h5>
           <label for="repo-description">Description: </label>
           <p class="card-text">{{repo.description}}</p>
+          <label for="repo-url">Repo url: </label>
           <a href="{{repo.html_url}}" target="_blank" class="btn btn-md pull-right">View on Github</a>
    </div>
+
+
+  </div>
 
 
 
