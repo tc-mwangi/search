@@ -41,7 +41,7 @@ export class UserService {
     }
     
     let promise =new Promise((resolve,reject)=>{
-        this.http.get<ApiResponse>(this.BaseUrl + this.username + this.FinalUrl).toPromise().then(response=>{
+        this.http.get<ApiResponse>('https://api.github.com/users/' + this.username + this.FinalUrl).toPromise().then(response=>{
             
           this.user.name = response.name;
           this.user.login = response.login; 

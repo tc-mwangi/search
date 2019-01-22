@@ -9,9 +9,9 @@
                       <span class="input-group-text" id="basic-addon1">@</span>
                     </div>
                     <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    
+                    <!-- (click)="getProfile()" -->
                     <button class="btn btn-outline-primary
-                     my-2 my-sm-0" type="submit" (click)="getProfile()">Search</button>
+                     my-2 my-sm-0" type="submit">Search</button>
                   </div>
                 </form>
 
@@ -66,19 +66,19 @@
 
 
     <!-- Repos Display Here: Hidden until repo button is clicked -->
-
-    <div class ="card border-primary mb-3" *ngFor="let repo of reposArray" style="max-width: 18rem;">
+    <!-- *ngFor="let repo of reposArray"  -->
+    <div class ="card border-primary mb-3" style="max-width: 18rem;">
         <!-- remove labels when data is retrieved -->
 
 
-        <div class="card-body text-primary">
+        <!-- <div class="card-body text-primary">
             <label for="repo-description">Repo Name: </label>
           <h5 class="card-title">{{repo.name | capitalize}}</h5>
           <label for="repo-description">Description: </label>
           <p class="card-text">{{repo.description}}</p>
           <label for="repo-url">Repo url: </label>
           <a href="{{repo.html_url}}" target="_blank" class="btn btn-md pull-right">View on Github</a>
-   </div>
+   </div> -->
 
 
   </div>
