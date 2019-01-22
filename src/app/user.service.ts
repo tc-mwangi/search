@@ -20,7 +20,7 @@ export class UserService {
   constructor(private http:HttpClient) { 
     this.username = "tc-mwangi";
     this.user = new User ('', '', '', '', '', '', 0, 0, 0, '');
-    this.repo = new Repo("","","");
+    this.repo = new Repo('','','');
     this.reposArray = [];
   }
 
