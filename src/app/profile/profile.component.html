@@ -1,54 +1,4 @@
-<!-- <app-navigation-profile></app-navigation-profile>
-
-  <div *ngIf= "profile">
-    <div class="panel">
-      <div class="panel-heading">
-        <h3 appHighlight>{{profile.login}}'s Details</h3>
-      </div>
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-sm-3">
-            <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="{{profile.login}}'s Avatar">
-          </div>
-          <div class="col-sm-5">
-            <ul class="list-group">
-              <li class="list-group-item">{{profile.name | bolden}} &mdash;{{profile.login}}</li>
-              <li class="list-group-item">{{profile.location}}</li>
-              <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
-              <li class="list-group-item" *ngIf="profile.company"> Works at:{{profile.company}}</li>
-              <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
-              <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" target = "_blank">{{profile.blog}}</a></li>
-              <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <div>
-              <p>
-                <span class="label">{{profile.followers}} Followers</span>
-                <span class="label">Following {{profile.following}}</span>
-                <span class="label">{{profile.public_gists}} Public Gists</span>
-                <span class="label">{{profile.public_repos}} Repositories</span>
-              </p>
-              <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-md">View profile on Github</a></p>
-              <div class="panel">
-                <div class="panel-heading">
-                  <h3 class="panel-heading">Repositories</h3>
-                </div>
-                <div class="panel-body" *ngFor="let repo of reposArray">
-                  <p class="clearfix">
-                    {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-md pull-right">View this project on Github</a>
-                  </p>
-                  <p>{{repo.description}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <!-- profile navigation element -->
+<!-- profile navigation element -->
 <nav class="navbar navbar-expand-lg" id="bg-primary">
     <div class="container">
 
@@ -95,22 +45,22 @@
 <!-- *ngIf="user" -->
 <div>
   <div class="card mb-3">
-      <h5 class="card-title" appUnderline >{{user.login}}</h5>
+      <!-- <h5 class="card-title" appUnderline >{{user.login}}</h5> -->
       <!-- placeholder image {{user.avatar_url}}-->
       <img src="./assets/images/avatar.jpg" height="500px" width="500px" class="img-circle img-fluid" alt="avatar">
       <div class="card-body">
-        <h5 class="card-title" appUnderline >{{user.login}}</h5>
-        <p class="card-text">{{user.login}}</p>
+        <!-- <h5 class="card-title" appUnderline >{{user.login}}</h5> -->
+        <!-- <p class="card-text">{{user.login}}</p> -->
         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
 
     <div class="card body">
         <ul class="list-group">
-          <li class="list-group-item">{{user.name | capitalize}} &mdash;{{user.login}}</li>
-          <li class="list-group-item">{{user.location}}</li>
-          <li class="list-group-item" *ngIf="user.bio">{{user.bio}}</li>   
-          <li class="list-group-item" *ngIf="user.email"><a href="emailto:{{user.email}}">{{profile.email}}</a></li>
+          <!-- <li class="list-group-item">{{user.name | capitalize}} &mdash;{{user.login}}</li>
+          <li class="list-group-item">{{user.location}}</li> -->
+          <!-- <li class="list-group-item" *ngIf="user.bio">{{user.bio}}</li>    -->
+          <!-- <li class="list-group-item" *ngIf="user.email"><a href="emailto:{{user.email}}">{{profile.email}}</a></li> -->
         </ul>
       </div>
 
