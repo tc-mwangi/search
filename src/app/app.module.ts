@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RoutingModule} from './routing/routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,6 +14,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SearchComponent } from './search/search.component';
 import { LandingComponent } from './landing/landing.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NavigationFooterComponent } from './navigation-footer/navigation-footer.component';
 
 
 @NgModule({
@@ -23,11 +26,15 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SearchComponent,
     LandingComponent,
     NotFoundComponent,
+    NavigationFooterComponent,
+    
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

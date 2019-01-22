@@ -1,14 +1,21 @@
 
 #bg-intro{
-  /* background-image: url('/assets/images/bg-1.jpg'); */
-  background-color: #86D9AB;
+  background-image: url('/assets/images/adam-whitlock-270558-unsplash.jpg');
+  background-size: cover;
+  /* background-color: #6EC7DF; */
   min-height: 500px;
   color: #ffffff
 
 }
 
 #main-buttons{
-  background-color: #86D9AB;
+  /* background-color: #F7765F; */
   color: #ffffff;
 
 }
+
+#btn-nav{
+  background-color: #86D9AB;
+  color: #ffffff;
+}
+
