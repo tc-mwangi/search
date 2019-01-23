@@ -8,22 +8,26 @@ import { Repo } from './repo'
   providedIn: 'root'
 })
 export class UserService {
-  // my user profile
-  private username:string;
-  user:User;
-  repo:Repo;
-  reposArray:any;
 
-  BaseUrl = environment.BaseUrl;
-  FinalUrl = environment.FinalUrl;
+  // default info on load
 
-  constructor(private http:HttpClient) { 
-    this.username = "tc-mwangi";
-    this.user = new User ('', '', '', '', '', '', 0, 0, 0, '');
-    this.repo = new Repo('','','');
-    this.reposArray = [];
+    username = 'tc-mwangi';
+    user = new User ('', '', '', '', '', '', 0, 0, 0, '');
+    client_id = '04fd0bb96c393d7b7105';
+    client_secret = 'B27f9a03fb39dc52557e8827d7b59c65c2a2c9bd';
+    repos = new Repo('','','');
+    reposArray = [];
+
+  // inject parameter
+  constructor(public http:HttpClient) {    
   }
 
+  // swith user on search
+  newUserName(username: string){
+    this.username = username;
+  }
+
+  // get user info from API using promise
   userRequest(){
 
     interface ApiResponse{
@@ -37,12 +41,13 @@ export class UserService {
       following: number;
       public_repos: number;
       html_url: string;
-
     }
+
+
+
     
-    let promise =new Promise((resolve,reject)=>{
-        this.http.get<ApiResponse>('https://api.github.com/users/' + this.username + this.FinalUrl).toPromise().then(response=>{
-            
+        let promise = new Promise((resolve,reject)=>{
+          this.http.get<ApiResponse>("https://api.github.com/users/" + this.username + "?client_id=" + this.client_id + "&client_secret=" + this.client_secret).toPromise().then(response=>{
           this.user.name = response.name;
           this.user.login = response.login; 
           this.user.location = response.location;
@@ -53,15 +58,17 @@ export class UserService {
           this.user.following = response.following;
           this.user.public_repos = response.public_repos;
           this.user.html_url = response.html_url;
-          resolve()
-          console.log("Woooohooooo");
-          console.log(this.user);
+          // test API response
+          console.log(this.user)
 
-            resolve()
+          resolve()
+          
         },
         error=>{
-                this.user.login="tc-mwangi"
+                this.user.name="top_cat"
                 this.user.avatar_url="https://avatars3.githubusercontent.com/u/45211962?v=4"
+                this.user.location ="Nairobi, Kenya."
+                this.user.bio ="Taking the road less travelled."              
                 reject(error)
             }
         )
@@ -72,3 +79,4 @@ export class UserService {
 
   
 }
+
