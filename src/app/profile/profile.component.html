@@ -16,7 +16,7 @@
 
             <div class="card" id="card-bg">
                     <div class="card-body">
-                        <form>
+                        <form (ngSubmit)="ngOnInit()" #searchUser="ngForm">
                             <div class="form-row align-items-center">
                               <div class="col-auto">
                                 <!-- <h4>Search Here:</h4> -->
@@ -28,7 +28,7 @@
                                   <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-search"></i></div>
                                   </div>
-                                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+                                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="username or repo" [(ngModel)] ="username" (keyup.enter)="ngOnInit()" name= "username">
                                 </div>
                               </div>
                               <div class="col-auto">
@@ -37,7 +37,7 @@
                                 </div>
                               </div>
                               <div class="col-auto">
-                                <button type="submit" id="main-buttons" class="btn btn-outline-primary btn-block btn-round">Submit</button>
+                                <button type="submit" id="main-buttons" class="btn btn-outline-primary btn-block btn-round">Search</button>
                               </div>
                             </div>
                           </form>
@@ -49,6 +49,9 @@
         </div>
       
       </div>
+
+
+
       
 
   
