@@ -87,11 +87,6 @@ Please make sure to update tests as appropriate.
 
 * **Loise Mwangi** - *Initial work* - [GithubSearchApp](https://github.com/tc-mwangi/)
 
-## Acknowledgments
-
-* Inspiration
-* etc
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/tc-mwangi/github-search-app/blob/master/LICENCE.md) file for details.
