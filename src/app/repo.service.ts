@@ -12,8 +12,8 @@ export class RepoService {
     username = 'tc-mwangi';
     reposArray;
     user = new User ('', '', '', '', '', '', 0, 0, 0, '');
-    private client_id = '04fd0bb96c393d7b7105';
-    private client_secret = 'B27f9a03fb39dc52557e8827d7b59c65c2a2c9bd';
+    client_id = '04fd0bb96c393d7b7105';
+    client_secret = 'B27f9a03fb39dc52557e8827d7b59c65c2a2c9bd';
     repos = new Repo('','','');
     
   constructor(private http:HttpClient) { }
