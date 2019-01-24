@@ -28,7 +28,7 @@
                                   <div class="input-group-prepend">
                                     <div class="input-group-text"><i class="fa fa-search"></i></div>
                                   </div>
-                                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="username or repo" [(ngModel)] ="username" (keyup.enter)="ngOnInit()" name= "username">
+                                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="username" [(ngModel)] ="username" (keyup.enter)="ngOnInit()" name= "username">
                                 </div>
                               </div>
                               <div class="col-auto">
@@ -43,12 +43,48 @@
                           </form>
                     </div>
                   </div>
-
-
-          
         </div>
       
       </div>
+ 
+       <!-- Display User Profile -->
+    
+      <div class="card mb-3" id="card-bg">
+            <div class="card-header">
+                    {{user.name}}
+                  </div>
+            <img src="{{user.avatar_url}}" id="respond" class="img-thumbnail card-img-top" alt="avatar_url">
+            <div class="card-body">
+              <h5 class="card-title">{{user.log_in}}</h5>
+              <!-- <h5 class="card-title">log_in: </h5> -->
+              <p class="card-text">Bio: {{user.bio}}</p>
+              <p class="card-text">Location: {{user.location}}</p>
+              <p class="card-text"><small class="text-muted">Followers: {{user.followers}}</small></p>
+              <p class="card-text"><small class="text-muted">Following: {{user.following}}</small></p>
+            </div>
+
+            <!-- <button type="submit" id="main-buttons" class="btn btn-outline-primary btn-round">View Repositories</button> -->
+
+          </div>
+
+          <!-- list repositories -->
+
+              <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card" *ngFor="let repo of reposArray">
+                        <div class="card-body">
+                          <h5 class="card-title">{{repo.name}}</h5>
+                          <p class="card-text">{{repo.description}}</p>
+                          <a href="{{repo.html_url}}" class="btn btn-primary">View on GitHub</a>
+                        </div>
+                      </div>
+                    </div>
+                    
+            </div>
+
+     
+
+      <app-navigation-footer></app-navigation-footer>
 
 
 

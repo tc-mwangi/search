@@ -15,9 +15,9 @@ import { Repo } from '../repo'
 })
 export class ProfileComponent implements OnInit {
   username: any;
-  user:User;
+  user: User;
   repos:Repo;
-  reposArray:any;
+  reposArray:any[];
 
 
   constructor(private userService: UserService, private repoService: RepoService) { 
@@ -26,13 +26,14 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.userService.newUserName(this.username)
-    console.log(this.username)
+    
 
     this.repoService.newUserName(this.username)
-    console.log(this.username)
+    
 
     this.userService.userRequest();
-    console.log(this.username)
+    this.user = this.userService.user
+    
   }
 
 }

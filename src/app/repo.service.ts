@@ -15,6 +15,8 @@ export class RepoService {
     client_id = '04fd0bb96c393d7b7105';
     client_secret = 'B27f9a03fb39dc52557e8827d7b59c65c2a2c9bd';
     repos = new Repo('','','');
+    repo: Repo;
+    
     
   constructor(private http:HttpClient) { }
 
